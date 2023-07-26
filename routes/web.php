@@ -51,6 +51,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('{id}/hapus', [StocksController::class, 'hapus']);
 	Route::get('/{page}', [PageController::class, 'index'])->name('page');
 	Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+	
 });
 Route::get('/user/export_excel', [\App\Http\Controllers\UserController::class, 'export_excel']);
 Route::get('/user/cetak_pdf', [\App\Http\Controllers\UserController::class, 'cetak_pdf']);

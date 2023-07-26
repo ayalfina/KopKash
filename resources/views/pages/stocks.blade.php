@@ -1,7 +1,6 @@
 @extends('layouts.app', ['class' => 'g-sidenav-show bg-gray-100'])
 
 @section('content')
-
     <div class="container-fluid py-4">
       
         <div class="row">
@@ -134,6 +133,7 @@
                         </div><hr>
 </form>  
         </div>
+        @include('sweetalert::alert')
         <div class="modal-footer">
         <button id='closeModal' type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         </div>
@@ -163,6 +163,9 @@
     </div>
   </div>
 </div>
+
    
 @endforeach
+
+
 @endsection

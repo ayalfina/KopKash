@@ -37,7 +37,7 @@ class StocksController extends Controller
         $data->price = $request->price;
         $data->save();
         
-        return Redirect('/stocks');
+        return Redirect('/stocks')->with('succes', 'berhasil');
         
     }
 

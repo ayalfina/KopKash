@@ -9,6 +9,7 @@ use App\Exports\UserExport;
 use Maatwebsite\Excel\Facades\Excel;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Http\Controllers\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class UserController extends Controller
@@ -20,6 +21,7 @@ class UserController extends Controller
 
     public function index()
     {
+        Alert::success('Selamat', 'Anda masuk di route User');
         return view('stock.index');
     }
     public function export_excel()
